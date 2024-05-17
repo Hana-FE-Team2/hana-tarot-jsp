@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script id="cards" src="./js/cards.js"></script>
+    <script id="card" src="./js/card.js"></script>
+    <link rel="stylesheet" href="./css/hanat-04.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <audio
+      autoplay
+      loop
+      src="background-sound.mp3"
+      id="background-sound"
+    ></audio>
+    <button id="open-modal" style="display: none"></button>
+
+    <div class="container">
+      <div class="flip-outer" id="card-title">
+        <span>과거</span>
+        <span>현재</span>
+        <span>미래</span>
+      </div>
+      <div class="flip-outer">
+        <div class="flip" id="card0-flip" style="transform: rotate(-30deg)">
+          <div class="flip-inner" id="card0" style="top: 10vh">
+            <img src="./img/component/cardBack.jpg" alt="" class="back" />
+            <img alt="" class="front" id="card0-front" />
+          </div>
+        </div>
+        <div class="flip" id="card1-flip">
+          <div class="flip-inner" id="card1">
+            <img src="./img/component/cardBack.jpg" alt="" class="back" />
+            <img alt="" class="front" id="card1-front" />
+          </div>
+        </div>
+        <div class="flip" id="card2-flip" style="transform: rotate(30deg)">
+          <div class="flip-inner" id="card2" style="top: 10vh">
+            <img src="./img/component/cardBack.jpg" alt="" class="back" />
+            <img alt="" class="front" id="card2-front" />
+          </div>
+        </div>
+      </div>
+
+      <!-- 카드 설명 모달 -->
+      <div id="modal" class="modal"></div>
+      <!-- 모달에 들어갈 설명 -->
+      <div id="message" style="display: none"></div>
+
+      <script src="./js/modal.js"></script>
+      <script src="./js/app.js"></script>
+      <!-- <script src=""></script> -->
+      <script src="./js/hanat-04.js"></script>
+    </div>
+  </body>
+</html>
